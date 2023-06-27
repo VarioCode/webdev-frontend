@@ -22,12 +22,13 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/environments"
             ],
+            "scripts": [],
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+              "@angular/material/prebuilt-themes/indigo-pink.css"
+            ]
           },
           "configurations": {
             "production": {
@@ -43,7 +44,13 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -51,7 +58,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -83,13 +96,12 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/favicon.ico"
             ],
+            "scripts": [],
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+              "@angular/material/prebuilt-themes/indigo-pink.css"
+            ]
           }
         }
       }

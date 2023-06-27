@@ -22,6 +22,9 @@ FROM nginx:latest AS ngi
 # Copying compiled code and nginx config to different folder
 # NOTE: This path may change according to your project's output folder
 COPY --from=build /dist/src/app/dist/webdev-frontend /usr/share/nginx/html
+
+CMD ["/bin/sh",  "-c",  "envsubst < /usr/share/nginx/html/environments/environment.template.ts > /usr/share/nginx/html/environments/environment.ts && exec nginx -g 'daemon off;'"]
+
 COPY /nginx.conf  /etc/nginx/conf.d/default.conf
 # Exposing a port, here it means that inside the container
 # the app will be using Port 80 while running

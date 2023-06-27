@@ -6,10 +6,11 @@ import { RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { ComponentsModule } from './modules/components.module';
 import { PagesModule } from './modules/pages.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterOutlet, AppRoutingModule, ComponentsModule, PagesModule],
+  imports: [BrowserModule, RouterOutlet, AppRoutingModule, ComponentsModule, PagesModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
