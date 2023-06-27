@@ -1,0 +1,51 @@
+module.exports = {
+  extends: [
+    'plugin:@angular-eslint/recommended',
+    'airbnb-typescript/base',
+    'plugin:prettier/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 6,
+    project: 'tsconfig.json',
+    tsconfigRootDir: './',
+  },
+  plugins: ['@typescript-eslint', '@angular-eslint', 'rxjs-angular', 'import', 'deprecation'],
+  rules: {
+    '@angular-eslint/component-selector': [
+      'error',
+      { type: 'element', prefix: 'app', style: 'kebab-case' },
+    ],
+    '@angular-eslint/directive-selector': [
+      'error',
+      { type: 'attribute', prefix: 'app', style: 'camelCase' },
+    ],
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'class-methods-use-this': 'off',
+    'import/order': 'off',
+    'import/prefer-default-export': 'off',
+    'linebreak-style': 'off',
+    'lines-between-class-members': 'off',
+    'max-classes-per-file': 'off',
+    'max-len': [
+      'error',
+      { code: 100, ignoreUrls: true, ignorePattern: '^import\\s.+\\sfrom\\s.+;$' },
+    ],
+    'no-console': ['warn', { allow: ['info', 'error'] }],
+    'no-underscore-dangle': 'off',
+    'no-useless-constructor': 'off',
+    'rxjs-angular/prefer-takeuntil': 'error',
+    'import/no-extraneous-dependencies': 'off',
+    '@typescript-eslint/lines-between-class-members': [
+      'error',
+      'always',
+      { exceptAfterSingleLine: true },
+    ],
+    'deprecation/deprecation': 'warn',
+    '@typescript-eslint/explicit-function-return-type': ['error'],
+  },
+  settings: { 'import/resolver': { typescript: {} } },
+};
