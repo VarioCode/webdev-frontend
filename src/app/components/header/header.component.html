@@ -1,0 +1,20 @@
+<div class="header">
+  <span>Jarno Crans</span>
+  <nav class="navigation">
+    <a class="navigation-item" (click)="onNavItemClick('home')">Home</a>
+    <a class="navigation-item" (click)="onNavItemClick('about')">About</a>
+    <a class="navigation-item" (click)="onNavItemClick('shop')">Shop</a>
+    <a class="navigation-item" (click)="onNavItemClick('contact')">Contact</a>
+  </nav>
+  <i class="fa fa-bars hamburger-icon" (click)="onHamburgerClick()"></i>
+</div>
+<nav *ngIf="showHamburgerMenu" class="hamburger-navigation">
+  <a [ngClass]="selectedItem == 'home' ? 'hamburger-nav-items-selected' : ''" class="hamburger-nav-items"
+     (click)="onNavItemClick('home')">Home</a>
+  <a [ngClass]="selectedItem == 'about' ? 'hamburger-nav-items-selected' : ''" class="hamburger-nav-items"
+     (click)="onNavItemClick('about')">About</a>
+  <a [ngClass]="selectedItem == 'shop' ? 'hamburger-nav-items-selected' : ''" class="hamburger-nav-items"
+     (click)="onNavItemClick('shop')">Shop</a>
+  <a [ngClass]="selectedItem == 'contact' ? 'hamburger-nav-items-selected' : ''" class="hamburger-nav-items"
+     (click)="onNavItemClick('contact')">Contact</a>
+</nav>

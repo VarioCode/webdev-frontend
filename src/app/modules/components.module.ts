@@ -9,6 +9,7 @@ import { CheckoutComponent } from '../pages/checkout/checkout.component';
 import { CartComponent } from '../components/shop/cart.component';
 import { PaymentComponent } from '../components/shop/payment.component';
 import { ProductComponent } from '../components/shop/product.component';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,6 @@ import { ProductComponent } from '../components/shop/product.component';
     PaymentComponent,
     ProductComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
 })
 export class ComponentsModule {}
