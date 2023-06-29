@@ -17,7 +17,8 @@ export class HeaderComponent {
   }
 
   onNavItemClick(itemName: string) {
-    this.router.navigate([itemName, itemName]);
+    this.router.navigate([itemName], {});
     this.selectedItem = itemName;
+    this.showHamburgerMenu = !this.showHamburgerMenu;
   }
 }

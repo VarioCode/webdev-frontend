@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class WelcomeComponent {
 
+  constructor() {
+    console.log('WelcomeComponent constructor called');
+  }
 }

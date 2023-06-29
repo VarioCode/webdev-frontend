@@ -1,0 +1,21 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-placeholder {
+  height: 100px;
+  width: 100px;
+  background-color: #F52846;
+}
+
+.title {
+  padding: 16px;
+}
+
+@media (min-width: 800px) {
+  .img-placeholder {
+    height: 600px;
+    width: 600px;
+  }
+}

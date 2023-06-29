@@ -47,6 +47,10 @@
     color: black;
   }
 
+  .navigation-item-selected {
+    color: yellow;
+  }
+
   .hamburger-icon {
     display: none;
   }
